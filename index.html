@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShortMaker AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-page" class="container">
+    <h1>ShortMaker AI</h1>
+    <input type="text" id="username" placeholder="아이디">
+    <input type="password" id="password" placeholder="비밀번호">
+    <button onclick="login()">로그인</button>
+  </div>
+
+  <div id="main-page" class="container hidden">
+    <h1>AI 쇼츠 제작 도우미</h1>
+    <input type="text" id="topic" placeholder="주제를 입력하세요">
+
+    <button onclick="generateTitle()">제목 생성</button>
+    <p id="title-result"></p>
+
+    <button onclick="generateHashtag()">해시태그 생성</button>
+    <p id="hashtag-result"></p>
+
+    <button onclick="generateImagePrompt()">이미지 프롬프트 생성</button>
+    <p id="image-result"></p>
+
+    <button onclick="generateVideoPrompt()">영상 프롬프트 생성</button>
+    <p id="video-result"></p>
+
+    <button onclick="saveHistory()">저장하기</button>
+
+    <h2>기록</h2>
+    <ul id="history"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
